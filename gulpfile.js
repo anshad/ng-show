@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-25 00:28:36
+* @Last Modified time: 2017-08-25 00:48:13
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -107,9 +107,9 @@ gulp.task('scripts', function() {
 	.on('error', createErrorHandler('gulp.src'))
 	.pipe(replace(/('|")use strict\1/g, ';'))
 	.on('error', createErrorHandler('remove'))
-	.pipe(sourcemaps.init())
+	//.pipe(sourcemaps.init())
 	.pipe(concat('app.min.js'))
-	.pipe(gulpif(!dist, sourcemaps.write('.')))
+	//.pipe(gulpif(!dist, sourcemaps.write('/')))
 	.pipe(gulpif(!dist, connect.reload()))
 	.pipe(uglify()) 
 	.on('error', createErrorHandler('uglify'))
