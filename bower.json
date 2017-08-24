@@ -1,0 +1,36 @@
+{
+  "name": "ng-show",
+  "description": "A movie listing app",
+  "main": "gulpfile.js",
+  "authors": [
+    "Anshad Vattapoyil <anshad.musafir@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs",
+    "karma",
+    "gulp",
+    "movie",
+    "list",
+    "sass",
+    "bower"
+  ],
+  "homepage": "https://github.com/anshad/ng-show",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6",
+    "angular-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  }
+}
