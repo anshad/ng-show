@@ -1,28 +1,31 @@
 {
-  "name": "ng-show",
-  "version": "1.0.0",
-  "description": "A movie listing app",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anshad/ng-show.git"
-  },
-  "keywords": [
-    "angularjs",
-    "karma",
-    "gulp",
-    "movie",
-    "list",
-    "sass",
-    "bower"
-  ],
-  "author": "Anshad Vattapoyil <anshad.musafir@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anshad/ng-show/issues"
-  },
-  "homepage": "https://github.com/anshad/ng-show#readme"
+    "name": "ng-show",
+    "version": "1.0.0",
+    "description": "A movie listing app",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/anshad/ng-show.git"
+    },
+    "keywords": [
+        "angularjs",
+        "karma",
+        "gulp",
+        "movie",
+        "list",
+        "sass",
+        "bower"
+    ],
+    "author": "Anshad Vattapoyil <anshad.musafir@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/anshad/ng-show/issues"
+    },
+    "homepage": "https://github.com/anshad/ng-show#readme",
+    "devDependencies": {
+        "gulp": "^3.9.1"
+    }
 }
