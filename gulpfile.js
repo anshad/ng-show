@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-25 00:20:00
+* @Last Modified time: 2017-08-25 00:28:36
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -187,7 +187,7 @@ gulp.task('watch', function() {
 	gulp.watch(srcDir + '/app/**/*.js', ['scripts']);
 	gulp.watch(srcDir + '/**/*.scss', ['styles']);
 	gulp.watch(srcDir + '/app/**/*.html', ['templates']);
-	gulp.watch(srcDir + '/assets/**/*.json', ['json']);
+	gulp.watch(srcDir + '/assets/json/*.json', ['json']);
 });
 
 /**
@@ -198,7 +198,7 @@ gulp.task('dev', ['connect-dev','libs','styles','fonts','html','scripts','templa
 /**
 * Production tasks
 */
-gulp.task('dist', ['set-production','libs','styles','fonts','html','scripts','templates','images','watch','json']);
+gulp.task('dist', ['set-production','libs','styles','fonts','html','scripts','templates','images','json']);
 
 /**
 * Default task
