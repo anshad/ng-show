@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-25 00:10:32
+* @Last Modified time: 2017-08-25 00:20:00
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -126,8 +126,9 @@ gulp.task('scripts', function() {
 * Bundle JSON
 */
 gulp.task('json', function() {
-	return gulp.src(srcDir + '/assets/**/*.json')
-	.pipe(gulp.dest(devDir + '/scripts'))
+	return gulp.src(srcDir + '/assets/json/*')
+	.pipe(gulpif(!dist, gulp.dest(devDir + '/json/')))
+	.pipe(gulpif(dist, gulp.dest(distDir + '/json/')))
 });
 
 /**
