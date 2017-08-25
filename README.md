@@ -7,3 +7,5 @@ A movie listing app
 
 ### Powered By
 [AngularJS](https://angularjs.org/) [GulpJS](https://gulpjs.com/) [Firebase](https://firebase.google.com/) [Travis CI](https://travis-ci.org/) [NodeJS](https://nodejs.org/en/) [Bootstrap](http://getbootstrap.com/) [Git](https://git-scm.com/) [Bower](https://bower.io/) [SASS](http://sass-lang.com/)
+
+### In :heart: with
