@@ -1,0 +1,30 @@
+Release Note
+------------
+
+The exact redline requirement match implemented in large screen resolution (Bootstrap 4, 992px - 1199px).
+- Header height - 192px
+- Icon size - 48x48 
+- Movie title size - 36pt
+- Grid spacing - 30px 
+- Spacing between title and image - 24px
+- Poster container margin - 90px
+
+The header style, text, icon size and grid layout adjusted in all other resolutions to have better user experience.
+
+Layout
+-------
+
+* sm - 2 column
+* md - 4 column
+* lg - redline matching - 3 column
+* xl - 6 column
+
+Functionality
+-------------
+- Listing from JSON
+- Lazy loading
+- Loading image placeholder
+- Back navigation
+- Search - N/A
+- Home - N/A
+- Detail View - N/A
