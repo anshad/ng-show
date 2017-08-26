@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 17:37:39
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 17:45:44
+* @Last Modified time: 2017-08-26 18:32:41
 */
 (function() {
 	'use strict';
@@ -14,8 +14,13 @@
 	ListService.$inject = ['UtilService'];
 
 	function ListService(UtilService) {
-		this.getMovieList = function(){
-			return UtilService.requestGet('json/CONTENTLISTINGPAGE-PAGE1.json');
+
+		/**
+		* Get paginated movie list from json file
+		*/
+		this.getMovieList = function(req){
+			var url = UtilService.rawFilePath + UtilService.rawFileName + req.pageNum + '.json';
+			return UtilService.requestGet(url);
 		}
 	}
 })();

@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:52:37
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 13:21:43
+* @Last Modified time: 2017-08-26 18:28:08
 */
 (function(){
 	'use strict';
@@ -14,12 +14,10 @@
 	HomeController.$inject = ['$scope', '$rootScope'];
 
 	function HomeController($scope, $rootScope) {
-
 		var vm = $scope;
 		var rootVm = $rootScope;
 
 		rootVm.pageTitle = 'Home';
-
 	}
 
 })();

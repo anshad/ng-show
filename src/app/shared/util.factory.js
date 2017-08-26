@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 17:22:27
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 17:48:43
+* @Last Modified time: 2017-08-26 18:34:22
 */
 (function(){
 	'use strict';
@@ -16,13 +16,21 @@
 	function UtilService($http, $q) {
 		return {
 			requestGet: requestGet,
-			handleResponse: handleResponse
+			handleResponse: handleResponse,
+			rawFilePath: 'json/',
+			rawFileName: 'CONTENTLISTINGPAGE-PAGE'
 		};
 
+		/*
+		* Generate HTTP Get request
+		*/
 		function requestGet(url, params) {
 			return handleResponse($http.get(url, { params: params }));
 		}
 
+		/*
+		* Handle HTTP service call promise
+		*/
 		function handleResponse(req) {
 			var deferred = $q.defer();
 

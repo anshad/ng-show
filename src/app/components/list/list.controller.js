@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 01:09:35
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 18:00:40
+* @Last Modified time: 2017-08-26 21:40:11
 */
 (function() {
 	'use strict';
@@ -17,15 +17,41 @@
 		var vm = $scope;
 		var rootVm = $rootScope;
 
+		rootVm.busy = false;
+		vm.pageNum = 1;
+		vm.loadMovies = loadMovies;
+
 		if(angular.isUndefined(vm.movies)) {
-			ListService.getMovieList().then(function(res) {
-				var res = res.data.page;
-				vm.movies = res['content-items'].content;
-				rootVm.pageTitle = res.title;
-				console.log(res)
-			}, function(err) {
-				console.log(err, 'err')
-			})
+			vm.loadMovies();
+		}
+
+		/**
+		* Load movies from service
+		*/
+		function loadMovies() {
+			if (!rootVm.busy) {
+				rootVm.busy = true;
+				ListService.getMovieList({pageNum:vm.pageNum}).then(function(res) {
+					var res = res.data.page;
+					rootVm.pageTitle = res.title;
+					vm.totalMovies = res['total-content-items'];
+					if(angular.isUndefined(vm.moviesListed)) {
+						vm.movies = res['content-items'].content;
+						vm.moviesListed = parseInt(res['page-size-returned']);
+					} else {
+						vm.movies = vm.movies.concat(res['content-items'].content);
+						vm.moviesListed+= parseInt(res['page-size-returned']);
+					}
+					if (vm.moviesListed < vm.totalMovies) {
+						rootVm.busy = false;
+						vm.pageNum++;
+					} else {
+						rootVm.busy = true;
+					}
+				}, function(err) {
+					console.log(err, 'err')
+				});
+			}
 		}
 	}
 })();
