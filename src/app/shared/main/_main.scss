@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:05:05
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 15:53:25
+* @Last Modified time: 2017-08-26 16:42:24
 */
 body {
 	overflow: hidden;
@@ -15,8 +15,11 @@ body {
 	height: 192px;
 	display: table;
 	width:100%;
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		height:70px;
+	}
+	@include media-breakpoint-up(xl) {
+		height:90px;
 	}
 	.btn-image {
 		width:48px;
@@ -25,7 +28,13 @@ body {
 		background-color:transparent;
 		background-repeat: no-repeat;
 		cursor: pointer;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
+			width:28px;
+			height:28px;
+			background-size: cover;                    
+			background-position: center center;
+		}
+		@include media-breakpoint-up(xl) {
 			width:28px;
 			height:28px;
 			background-size: cover;                    
@@ -47,7 +56,11 @@ body {
 			line-height: 55px;
 			padding-left:15px;
 			color:#fff;
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
+				line-height: 28px;
+				font-size:17px;
+			}
+			@include media-breakpoint-up(xl) {
 				line-height: 28px;
 				font-size:17px;
 			}

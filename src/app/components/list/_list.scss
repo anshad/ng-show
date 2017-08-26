@@ -2,14 +2,17 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 22:14:14
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 16:06:39
+* @Last Modified time: 2017-08-26 16:42:30
 */
 .content {
 	overflow-x:hidden;
 	height:calc(100vh - 200px);
 	max-width: 100%;
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		height:calc(100vh - 80px);
+	}
+	@include media-breakpoint-up(xl) {
+		height:calc(100vh - 100px);
 	}
 }
 .loading-img {
