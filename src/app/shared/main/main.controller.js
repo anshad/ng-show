@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 00:57:10
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 13:16:25
+* @Last Modified time: 2017-08-26 18:03:11
 */
 (function() {
 	'use strict';
@@ -20,7 +20,6 @@
 
 		$transitions.onSuccess({}, function(trans) {
 			rootVm.prevState = trans.$from().name;
-			console.log(trans.$to(), trans.$from());
 		});
 	}
 })();
