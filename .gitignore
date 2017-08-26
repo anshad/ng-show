@@ -52,7 +52,7 @@ bower_components
 # avoid pushing production files
 dist
 dev
-src/tests/reports
+src/tests/report
 
 # VIM: Temperory files
 *~
