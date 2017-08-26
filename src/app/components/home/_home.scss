@@ -2,5 +2,34 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:52:04
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 12:52:06
+* @Last Modified time: 2017-08-26 23:27:28
 */
+.categeory-container {
+	display:table;
+	background-color: #2A2A2A;
+	height: 200px;
+	width:100%;
+	margin-bottom: 30px;
+	@media (max-width: 575px) {
+		height: 260px;
+	}
+	@include media-breakpoint-down(sm) {
+		height: 232px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 305px;
+	}
+	&:hover{
+		border:3px solid #75C74E;
+		cursor: pointer;
+	}
+	& > div {
+		display:table-cell;
+		vertical-align:middle;
+		text-align: center;
+		h4 {
+			color:#fff;
+			font-size:13px;
+		}
+	}
+}

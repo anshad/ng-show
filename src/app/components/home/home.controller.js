@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:52:37
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 18:28:08
+* @Last Modified time: 2017-08-26 22:56:36
 */
 (function(){
 	'use strict';

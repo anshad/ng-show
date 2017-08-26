@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 22:14:14
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 16:42:30
+* @Last Modified time: 2017-08-26 22:40:18
 */
 .content {
 	overflow-x:hidden;
@@ -30,4 +30,24 @@
 img[src=""] {
 	height:calc(100% - 26px);
 	border: none;
+}
+.movie-holder {
+	margin-bottom: 90px;
+	cursor:pointer;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 50px;
+	}
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 50px;
+	}
+}
+.movie-title {
+	color:#fff;
+	font-size:36pt;
+	@include media-breakpoint-down(md) {
+		font-size:13px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size:13px;
+	}
 }
