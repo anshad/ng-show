@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 22:14:14
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 15:14:52
+* @Last Modified time: 2017-08-26 16:06:39
 */
 .content {
 	overflow-x:hidden;
@@ -12,7 +12,19 @@
 		height:calc(100vh - 80px);
 	}
 }
+.loading-img {
+	background-image: url('../images/missing.png');
+	background-size:cover;                   
+	background-position: center center;
+	background-repeat:no-repeat;
+	background-color:transparent;
+
+}
 .poster-img {
 	width:100%;
 	margin-bottom: 24px;
+}
+img[src=""] {
+	height:calc(100% - 26px);
+	border: none;
 }

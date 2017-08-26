@@ -1,5 +1,5 @@
 # ng-show
-A movie listing app
+~~A movie listing app~~ An assignment.
 
 ![build](https://travis-ci.org/anshad/ng-show.svg?branch=master)
 
