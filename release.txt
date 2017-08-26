@@ -26,5 +26,5 @@ Functionality
 - Loading image placeholder
 - Back navigation
 - Search - N/A
-- Home - N/A
+- Home - Simple tiles
 - Detail View - N/A
