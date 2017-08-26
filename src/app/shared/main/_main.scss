@@ -1,0 +1,65 @@
+/*
+* @Author: Anshad Vattapoyil
+* @Date:   2017-08-26 12:05:05
+* @Last Modified by:   Anshad Vattapoyil
+* @Last Modified time: 2017-08-26 15:10:46
+*/
+body {
+	overflow: hidden;
+}
+.container-fluid {
+	padding-left:30px;
+	padding-right: 30px;
+}
+.header {
+	height: 192px;
+	display: table;
+	width:100%;
+	@include media-breakpoint-down(sm) {
+		height:70px;
+	}
+	.btn-image {
+		width:48px;
+		height:48px;
+		display: inline-block;
+		background-color:transparent;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		@include media-breakpoint-down(sm) {
+			width:28px;
+			height:28px;
+			background-size: cover;                    
+			background-position: center center;
+		}
+	}
+	& > div {
+		display:table-cell;
+		vertical-align:middle;
+	}
+	.back-container {
+		.back-btn {
+			float:left;
+			background-image: url('../images/back.png');
+		}
+		h3 {
+			display:inline-block;
+			float:left;
+			line-height: 55px;
+			padding-left:15px;
+			color:#fff;
+			@include media-breakpoint-down(sm) {
+				line-height: 28px;
+				font-size:17px;
+			}
+		}
+	}
+	.search-container {
+		.search-btn {
+			float:right;
+			background-image: url('../images/search.png');
+		}
+	}
+}
+.loading-img {
+	background: transparent url('../images/missing.png') center no-repeat;
+}

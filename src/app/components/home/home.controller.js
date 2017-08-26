@@ -1,19 +1,25 @@
 /*
 * @Author: Anshad Vattapoyil
-* @Date:   2017-08-25 00:57:10
+* @Date:   2017-08-26 12:52:37
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-25 00:59:08
+* @Last Modified time: 2017-08-26 13:21:43
 */
-(function() {
+(function(){
 	'use strict';
 
 	angular
 	.module('app')
 	.controller('HomeController', HomeController);
 
-	HomeController.$inject = ['$scope'];
+	HomeController.$inject = ['$scope', '$rootScope'];
 
-	function HomeController($scope) {
+	function HomeController($scope, $rootScope) {
+
+		var vm = $scope;
+		var rootVm = $rootScope;
+
+		rootVm.pageTitle = 'Home';
 
 	}
+
 })();

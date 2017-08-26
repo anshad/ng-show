@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-25 00:48:13
+* @Last Modified time: 2017-08-26 14:52:21
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -53,16 +53,14 @@ gulp.task('styles', function() {
 
 	var styles = [
 	//'./bower_components/font-awesome/scss/font-awesome.scss',
-	'./bower_components/bootstrap/dist/css/bootstrap.css',
-	'./bower_components/bootstrap/dist/css/bootstrap-theme.css',
 	srcDir + '/assets/styles/app.scss'
 	];
 
 	return gulp.src(styles)
-	.pipe(sourcemaps.init())
+	//.pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(concat('app.min.css'))
-	.pipe(gulpif(!dist, sourcemaps.write('.')))
+	//.pipe(gulpif(!dist, sourcemaps.write('.')))
 	.pipe(gulpif(!dist, connect.reload()))
 	.pipe(minifyCSS())
 	.pipe(gulpif(!dist, gulp.dest(devDir + '/styles/')))
@@ -113,9 +111,9 @@ gulp.task('scripts', function() {
 	.pipe(gulpif(!dist, connect.reload()))
 	.pipe(uglify()) 
 	.on('error', createErrorHandler('uglify'))
-	.pipe(stripDebug())
+	.pipe(gulpif(dist, stripDebug()))
 	.on('error', createErrorHandler('strip'))
-	.pipe(stripComment())
+	.pipe(gulpif(dist, stripComment()))
 	.on('error', createErrorHandler('strip'))
 	.pipe(gulpif(!dist, gulp.dest(devDir + '/scripts/')))
 	.pipe(gulpif(dist, gulp.dest(distDir + '/scripts/')))

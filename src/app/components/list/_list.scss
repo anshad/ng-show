@@ -1,0 +1,18 @@
+/*
+* @Author: Anshad Vattapoyil
+* @Date:   2017-08-25 22:14:14
+* @Last Modified by:   Anshad Vattapoyil
+* @Last Modified time: 2017-08-26 15:14:52
+*/
+.content {
+	overflow-x:hidden;
+	height:calc(100vh - 200px);
+	max-width: 100%;
+	@include media-breakpoint-down(sm) {
+		height:calc(100vh - 80px);
+	}
+}
+.poster-img {
+	width:100%;
+	margin-bottom: 24px;
+}
