@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 14:52:21
+* @Last Modified time: 2017-08-27 00:16:34
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -168,8 +168,8 @@ gulp.task('templates', function() {
 		spare: true
 	}))
 	.pipe(templatecache('tpl.min.js', {
-		module: 'app.templates',
-		standalone: true
+		module: 'app',
+		standalone: false
 	}))
 	.pipe(uglify())
 	.pipe(gulpif(!dist, gulp.dest(devDir + '/scripts/')))

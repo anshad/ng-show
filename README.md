@@ -7,7 +7,7 @@
 
 Installation
 ------------
-* Prerequisite for compilation
+* Prerequisite to compile
 	- Git
 	- NodeJS
 	- Bower (__`sudo npm install -g bower`__)

@@ -2,7 +2,10 @@
     "name": "ng-show",
     "version": "1.0.0",
     "description": "A movie listing app",
-    "main": "gulpfile.js",
+    "main": "karma.conf.js",
+    "directories": {
+        "test": "src/tests"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -40,6 +43,11 @@
         "gulp-strip-comments": "^2.5.1",
         "gulp-strip-debug": "^1.1.0",
         "gulp-uglify": "^3.0.0",
-        "gulp-util": "^3.0.8"
+        "gulp-util": "^3.0.8",
+        "jasmine-core": "^2.8.0",
+        "karma": "^1.7.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-html-reporter": "^0.2.7",
+        "karma-jasmine": "^1.1.0"
     }
 }
