@@ -19,12 +19,13 @@ Layout
 * lg - redline matching - 3 column
 * xl - 6 column
 
-Functionality
+Features
 -------------
 - Listing from JSON
 - Lazy loading
-- Loading image placeholder
+- Missing image placeholder
 - Back navigation
-- Search - N/A
+- Unit tests - basic 
+- Search - Simple filter
 - Home - Simple tiles
 - Detail View - N/A

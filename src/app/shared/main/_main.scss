@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:05:05
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 16:42:24
+* @Last Modified time: 2017-08-27 15:00:12
 */
 body {
 	overflow: hidden;
@@ -67,9 +67,45 @@ body {
 		}
 	}
 	.search-container {
+		.search-box {
+			background-color: #2a2a2a;
+			width: 200px;
+			display: inline-block;
+			float: right;
+			border-radius: 0;
+			border: none;
+			color:#fff;
+			height:48px;
+			@include media-breakpoint-down(md) {
+				height: 36px;
+			}
+			@include media-breakpoint-up(xl) {
+				height: 36px;
+			}
+		}
 		.search-btn {
-			float:right;
+			float: right;
 			background-image: url('../images/search.png');
+			background-color: #2a2a2a;
+			border-radius: 0;
+			background-size:cover;
+			@include media-breakpoint-down(md) {
+				width: 30px;
+				height: 36px;
+				margin: 0;
+				padding-right: 13px;
+				background-size: 26px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 30px;
+				height: 36px;
+				margin: 0;
+				padding-right: 13px;
+				background-size: 26px;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			display:none;
 		}
 	}
 }
