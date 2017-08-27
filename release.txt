@@ -29,3 +29,5 @@ Features
 - Search - Simple filter
 - Home - Simple tiles
 - Detail View - N/A
+- Lint js, css and scss code
+- Automated CI for firebase deployment
