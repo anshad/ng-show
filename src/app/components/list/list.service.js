@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 17:37:39
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 18:32:41
+* @Last Modified time: 2017-08-27 15:08:38
 */
 (function() {
 	'use strict';
@@ -21,6 +21,6 @@
 		this.getMovieList = function(req){
 			var url = UtilService.rawFilePath + UtilService.rawFileName + req.pageNum + '.json';
 			return UtilService.requestGet(url);
-		}
+		};
 	}
 })();

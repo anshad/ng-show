@@ -2,14 +2,9 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:52:04
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 23:27:28
+* @Last Modified time: 2017-08-27 15:45:00
 */
 .categeory-container {
-	display:table;
-	background-color: #2A2A2A;
-	height: 200px;
-	width:100%;
-	margin-bottom: 30px;
 	@media (max-width: 575px) {
 		height: 260px;
 	}
@@ -19,17 +14,22 @@
 	@include media-breakpoint-up(xl) {
 		height: 305px;
 	}
-	&:hover{
-		border:3px solid #75C74E;
+	background-color: $dark;
+	display: table;
+	height: 200px;
+	margin-bottom: 30px;
+	width: 100%;
+	&:hover {
+		border: 3px solid $green;
 		cursor: pointer;
 	}
 	& > div {
-		display:table-cell;
-		vertical-align:middle;
+		display: table-cell;
+		vertical-align: middle;
 		text-align: center;
 		h4 {
-			color:#fff;
-			font-size:13px;
+			color: $white;
+			font-size: 13px;
 		}
 	}
 }

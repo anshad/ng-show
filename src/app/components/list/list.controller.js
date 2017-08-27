@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-25 01:09:35
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 21:40:11
+* @Last Modified time: 2017-08-27 15:06:43
 */
 (function() {
 	'use strict';
@@ -32,7 +32,7 @@
 			if (!rootVm.busy) {
 				rootVm.busy = true;
 				ListService.getMovieList({pageNum:vm.pageNum}).then(function(res) {
-					var res = res.data.page;
+					res = res.data.page;
 					rootVm.pageTitle = res.title;
 					vm.totalMovies = res['total-content-items'];
 					if(angular.isUndefined(vm.moviesListed)) {
@@ -49,7 +49,7 @@
 						rootVm.busy = true;
 					}
 				}, function(err) {
-					console.log(err, 'err')
+					console.log(err, 'err');
 				});
 			}
 		}

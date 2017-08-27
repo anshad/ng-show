@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 21:51:48
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-27 00:16:34
+* @Last Modified time: 2017-08-27 15:17:22
 */
 var gulp = require('gulp'),
 sourcemaps = require("gulp-sourcemaps"),
@@ -18,7 +18,10 @@ connect = require('gulp-connect'),
 minifyCSS = require('gulp-clean-css'),
 minifyHTML = require('gulp-htmlmin'),
 templatecache = require('gulp-angular-templatecache'),
-replace = require('gulp-replace');
+replace = require('gulp-replace'),
+jshint = require('gulp-jshint'),
+stylish = require('jshint-stylish'),
+sassLint = require('gulp-sass-lint');
 
 var devDir = './dev',
 distDir = './dist',
@@ -157,6 +160,25 @@ gulp.task('html', function() {
 	.pipe(gulpif(dist, gulp.dest(distDir)));
 });
 
+// Lint Task - Lint all javascript files using jshint
+gulp.task('jslint', function() {
+	return gulp.src(srcDir + '/app/**/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter(stylish));
+});
+
+// Lint Task - Lint all SASS/CSS files
+gulp.task('csslint', function() {
+	return gulp.src([srcDir + '/app/**/*.s+(a|c)ss',
+	                srcDir + '/assets/styles/app.scss'
+	                ])
+	.pipe(sassLint({
+		configFile: '.sass-lint.yml'
+	}))
+	.pipe(sassLint.format())
+	.pipe(sassLint.failOnError());
+});
+
 /**
 * Bundle angular templates
 */
@@ -182,8 +204,8 @@ gulp.task('templates', function() {
 */
 gulp.task('watch', function() {
 	gulp.watch(srcDir + '/*.html', ['html']);
-	gulp.watch(srcDir + '/app/**/*.js', ['scripts']);
-	gulp.watch(srcDir + '/**/*.scss', ['styles']);
+	gulp.watch(srcDir + '/app/**/*.js', ['scripts', 'jslint']);
+	gulp.watch(srcDir + '/**/*.scss', ['styles', 'csslint']);
 	gulp.watch(srcDir + '/app/**/*.html', ['templates']);
 	gulp.watch(srcDir + '/assets/json/*.json', ['json']);
 });

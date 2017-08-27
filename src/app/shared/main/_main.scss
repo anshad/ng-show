@@ -2,93 +2,91 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 12:05:05
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-27 15:00:12
+* @Last Modified time: 2017-08-27 15:51:35
 */
 body {
 	overflow: hidden;
 }
 .container-fluid {
-	padding-left:30px;
+	padding-left: 30px;
 	padding-right: 30px;
 }
 .header {
-	height: 192px;
-	display: table;
-	width:100%;
 	@include media-breakpoint-down(md) {
-		height:70px;
+		height: 70px;
 	}
 	@include media-breakpoint-up(xl) {
-		height:90px;
+		height: 90px;
 	}
+	height: 192px;
+	display: table;
+	width: 100%;
 	.btn-image {
-		width:48px;
-		height:48px;
-		display: inline-block;
-		background-color:transparent;
-		background-repeat: no-repeat;
-		cursor: pointer;
 		@include media-breakpoint-down(md) {
-			width:28px;
-			height:28px;
-			background-size: cover;                    
+			width: 28px;
+			height: 28px;
+			background-size: cover;
 			background-position: center center;
 		}
 		@include media-breakpoint-up(xl) {
-			width:28px;
-			height:28px;
-			background-size: cover;                    
+			width: 28px;
+			height: 28px;
+			background-size: cover;
 			background-position: center center;
 		}
+		width: 48px;
+		height: 48px;
+		display: inline-block;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		cursor: pointer;
 	}
 	& > div {
-		display:table-cell;
-		vertical-align:middle;
+		display: table-cell;
+		vertical-align: middle;
 	}
 	.back-container {
 		.back-btn {
-			float:left;
+			float: left;
 			background-image: url('../images/back.png');
 		}
 		h3 {
-			display:inline-block;
-			float:left;
-			line-height: 55px;
-			padding-left:15px;
-			color:#fff;
 			@include media-breakpoint-down(md) {
 				line-height: 28px;
-				font-size:17px;
+				font-size: 17px;
 			}
 			@include media-breakpoint-up(xl) {
 				line-height: 28px;
-				font-size:17px;
+				font-size: 17px;
 			}
+			display: inline-block;
+			float: left;
+			line-height: 55px;
+			padding-left: 15px;
+			color: $white;
 		}
 	}
 	.search-container {
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
 		.search-box {
-			background-color: #2a2a2a;
+			@include media-breakpoint-down(md) {
+				height: 36px;
+			}
+			@include media-breakpoint-up(xl) {
+				height: 36px;
+			}
+			background-color: $dark;
 			width: 200px;
 			display: inline-block;
 			float: right;
 			border-radius: 0;
-			border: none;
-			color:#fff;
-			height:48px;
-			@include media-breakpoint-down(md) {
-				height: 36px;
-			}
-			@include media-breakpoint-up(xl) {
-				height: 36px;
-			}
+			border: 0;
+			color: $white;
+			height: 48px;
 		}
 		.search-btn {
-			float: right;
-			background-image: url('../images/search.png');
-			background-color: #2a2a2a;
-			border-radius: 0;
-			background-size:cover;
 			@include media-breakpoint-down(md) {
 				width: 30px;
 				height: 36px;
@@ -103,9 +101,11 @@ body {
 				padding-right: 13px;
 				background-size: 26px;
 			}
-		}
-		@include media-breakpoint-down(sm) {
-			display:none;
+			float: right;
+			background-image: url('../images/search.png');
+			background-color: $dark;
+			border-radius: 0;
+			background-size: cover;
 		}
 	}
 }

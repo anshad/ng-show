@@ -2,20 +2,23 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-24 23:31:17
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 14:54:05
+* @Last Modified time: 2017-08-27 15:42:46
 */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-@import '../../../bower_components/bootstrap/scss/bootstrap.scss';
+@import '../../../bower_components/bootstrap/scss/bootstrap';
 
 $font: 'Titillium Web', sans-serif;
-$bg-color:#040506;
+$bg-color: #040506;
+$dark: #2a2a2a;
+$white: #ffffff;
+$green: #75c74e;
 
 @import '../../app/app_map';
 
-html{
+html {
 	font-size: 16px;
 }
-body{
+body {
 	font-family: $font;
 	position: relative;
 	overflow-x: hidden;
@@ -24,29 +27,28 @@ body{
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	font-family: $font;
 }
-h3,h4{
+h3,
+h4 {
 	margin: 0 !important;
 }
-p{
+p {
 	margin-bottom: 0;
 }
-button:focus{
-	outline: 0 !important;
-}
 nav ul,
-ul{
+ul {
 	padding: 0;
 	margin: 0;
 }
 nav ul li,
-ul li{
+ul li {
 	display: inline-block;
 	list-style: none;
 }
-input:focus,
-select:focus,
-textarea:focus,
-button:focus,
-a:focus {
-	outline: none;
+input,
+select,
+textarea,
+button {
+	&:focus {
+		outline: none;
+	}
 }
