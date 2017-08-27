@@ -9,7 +9,7 @@ Installation
 ------------
 * Prerequisite to compile
 	- Git
-	- NodeJS
+	- NodeJS and NPM
 	- Bower (__`sudo npm install -g bower`__)
 	- Gulp (__`sudo npm install -g gulp gulp-cli`__)
 	- Karma (__`sudo npm install -g karma-cli`__)
