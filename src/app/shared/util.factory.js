@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 17:22:27
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-26 18:34:22
+* @Last Modified time: 2017-08-27 16:43:57
 */
 (function(){
 	'use strict';
@@ -11,8 +11,12 @@
 	.module('app')
 	.factory('UtilService', UtilService);
 
+	// Inject dependencies
 	UtilService.$inject = ['$http', '$q'];
 
+	/**
+	* Common Utility factory for injecting across the app
+	*/
 	function UtilService($http, $q) {
 		return {
 			requestGet: requestGet,

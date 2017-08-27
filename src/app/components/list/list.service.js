@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-26 17:37:39
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-27 15:08:38
+* @Last Modified time: 2017-08-27 16:46:25
 */
 (function() {
 	'use strict';
@@ -11,8 +11,12 @@
 	.module('app')
 	.service('ListService', ListService);
 
+	// Inject dependencies
 	ListService.$inject = ['UtilService'];
 
+	/**
+	* Service for handling list page logic
+	*/
 	function ListService(UtilService) {
 
 		/**

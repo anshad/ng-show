@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-27 11:28:06
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-27 12:23:24
+* @Last Modified time: 2017-08-27 16:50:42
 */
 describe('Testing Routes', function(){
 	var $rootScope, $state, $injector, state;
@@ -18,6 +18,7 @@ describe('Testing Routes', function(){
 		});
 	});
 
+	// Test routing
 	it('should respond to URL', function() {
 		expect($state.href('main.home')).toEqual('#!/home');
 		expect($state.href('main.list')).toEqual('#!/list');

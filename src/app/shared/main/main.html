@@ -2,12 +2,14 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="affix header">
+				<!-- back navigation: not available in home page -->
 				<div class="back-container">
 					<button type="button" class="btn btn-image back-btn" data-ng-if="$state.current.name !== 'main.home'" data-ng-click="$state.go(prevState)">
 						<span class="sr-only">Back</span>
 					</button>
 					<h3>{{ pageTitle }}</h3>
 				</div>
+				<!-- search/filter: not available in home page and small screens -->
 				<div class="search-container" data-ng-show="$state.current.name !== 'main.home'">
 					<button type="button" class="btn btn-image search-btn">
 						<span class="sr-only">Search</span>

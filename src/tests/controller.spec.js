@@ -2,7 +2,7 @@
 * @Author: Anshad Vattapoyil
 * @Date:   2017-08-27 00:35:20
 * @Last Modified by:   Anshad Vattapoyil
-* @Last Modified time: 2017-08-27 14:29:22
+* @Last Modified time: 2017-08-27 16:50:06
 */
 describe('Testing Controller', function() {
 	var scope,controller;
@@ -11,6 +11,7 @@ describe('Testing Controller', function() {
 		module('app');
 	});
 
+	// Test home controller
 	describe('home controller', function () {
 		beforeEach(inject(function ($rootScope, $controller) {
 			scope = $rootScope.$new();
@@ -23,6 +24,7 @@ describe('Testing Controller', function() {
 		});
 	});
 
+	// Test main controller
 	describe('main controller', function () {
 		beforeEach(inject(function ($rootScope, $controller) {
 			scope = $rootScope.$new();
@@ -35,6 +37,7 @@ describe('Testing Controller', function() {
 		});
 	});
 
+	// Test list controller
 	describe('list controller', function () {
 		beforeEach(inject(function ($rootScope, $controller) {
 			scope = $rootScope.$new();
